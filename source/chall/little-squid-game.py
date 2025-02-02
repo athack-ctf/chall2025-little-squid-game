@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 
 import random
-import time
+from datetime import datetime
 
 SLEEP_DELAY = 5
 MAX_ATTEMPTS = 3
 
 
 def main():
-    random.seed(time.localtime().tm_sec)
+    random.seed(datetime.now().microsecond)
     game_counter = 0
     while True:
 
