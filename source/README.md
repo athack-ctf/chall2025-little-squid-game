@@ -1,10 +1,13 @@
-# Running Your Challenge
+# Running Little Squid Game
 
-Place all the code needed to run your challenge in this directory, and document the required environment as described
-below:
+```
+# Run container
+docker compose up --build
+```
 
-- If you have included a `Dockerfile` and a `docker-compose.yml`, then that is all that should be enough (unless additional
-  explanations are needed as well).
-- If you have not, please document the steps to create a runnable instance of your challenge, as we (Anis and Hugo)
-  will refer to this when adding the `Dockerfile` and `docker-compose.yml`
-- For any clarifications, consult us (Anis and Hugo).
+## Test your connection
+
+```
+# Test connection (if running remotely, replace 127.0.0.1 with the container's ip)
+nc 127.0.0.1 2025
+```

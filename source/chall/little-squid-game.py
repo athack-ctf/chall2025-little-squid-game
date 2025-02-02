@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import random
 import time
 
@@ -19,7 +21,8 @@ def main():
         for i in range(MAX_ATTEMPTS):
             while True:
                 try:
-                    guess = int(input(f"Attempt {i + 1}: Enter your guess: "))
+                    print(f"Attempt {i + 1}: Enter your guess: ", end="")
+                    guess = int(input())
                     break
                 except ValueError:
                     print("Invalid input. Enter an integer!")
@@ -31,6 +34,7 @@ def main():
                     print(flag)
                 return
             else:
+                print("Your guess was incorrect!")
                 print(f"You have {MAX_ATTEMPTS - i} attempts left.")
 
         print(f"The number was {number}.")
