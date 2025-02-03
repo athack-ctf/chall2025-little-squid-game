@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
-import random
+import time
 from datetime import datetime
+import random
 
 SLEEP_DELAY = 5
 MAX_ATTEMPTS = 3
