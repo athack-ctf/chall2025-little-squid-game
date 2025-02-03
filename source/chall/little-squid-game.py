@@ -36,7 +36,7 @@ def main():
                 return
             else:
                 print("Your guess was incorrect!")
-                print(f"You have {MAX_ATTEMPTS - i} attempts left.")
+                print(f"You have {MAX_ATTEMPTS - (i+1)} attempts left.")
 
         print(f"The number was {number}.")
         print("Better luck next time!")
