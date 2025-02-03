@@ -13,7 +13,7 @@ def main():
     game_counter = 0
     while True:
 
-        print(f"Little くコ:彡 GAME #{game_counter + 1}")
+        print(f"LITTLE くコ:彡 GAME #{game_counter + 1}")
 
         number = random.randint(0, 100000000)
 
