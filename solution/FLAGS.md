@@ -1,3 +1,3 @@
-# FLAGS
+# FLAG
 
-- `ATHACKCTF{from_Seed_comes_truth}`
+- `ATHACKCTF{little_squid_with_a_little_seed}`
