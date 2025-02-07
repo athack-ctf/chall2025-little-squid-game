@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 import random
 
-SLEEP_DELAY = 5
+SLEEP_DELAY = 10
 MAX_ATTEMPTS = 3
 
 
