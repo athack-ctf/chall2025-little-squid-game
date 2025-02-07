@@ -2,8 +2,8 @@ import random
 
 # TODO: Update generated_numbers with the numbers you get.
 generated_numbers = [
-    39475,
-    21199
+    33368,
+    17680
 ]
 
 MIN_NUMBER = 0
