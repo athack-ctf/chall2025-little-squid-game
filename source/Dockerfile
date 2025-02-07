@@ -1,6 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update && apt-get install -y \
+    coreutils \
     python3 \
     socat \
     bash \
