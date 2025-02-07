@@ -9,7 +9,7 @@
 - Fail 2 times (or more), and collect the generated numbers (for instance, `39475` and `21199`)
   ![](./screenshots/screenshot2.png)
 
-- In [solution.py](./solution.py) Populate `generated_numbers` with the collected numbers:
+- In [solution.py](./solution.py), populate `generated_numbers` with the collected numbers:
 
     ```
     generated_numbers = [
