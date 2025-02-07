@@ -4,6 +4,7 @@
   differently.
 
   ![](./screenshots/screenshot1.png)
+  
   **IMPORTANT: USE THE PYTHON VERSION THAT THE RUNNING CHALLENGE GIVES YOU, NOT THE ONE ON THE SCREENSHOT.** 
 
 - Fail 2 times (or more), and collect the generated numbers (for instance, `39475` and `21199`)
