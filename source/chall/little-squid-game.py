@@ -12,8 +12,8 @@ def main():
     random.seed(datetime.now().microsecond)
     game_counter = 0
     while True:
-
-        print(f"LITTLE くコ:彡 GAME #{game_counter + 1}")
+        game_counter += 1
+        print(f"LITTLE くコ:彡 GAME #{game_counter}")
 
         number = random.randint(0, 100000000)
 
@@ -42,7 +42,7 @@ def main():
         print("Better luck next time!")
         print(f"Little くコ:彡 will take a {SLEEP_DELAY} seconds nap...")
         time.sleep(SLEEP_DELAY)
-
+  
 
 if __name__ == "__main__":
     main()

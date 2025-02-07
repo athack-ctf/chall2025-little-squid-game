@@ -14,9 +14,9 @@
 
 The challenge teaches participants about weaknesses in random number generation, particularly the predictability of random number generators when seeded with system time.
 
-Educational Goals: (1) Participants will able to demonstrate the weaknesses of random number generators when seeded with predictable values. (2)Participants will know how system time-based seeding can be exploited.
+Educational Goals: (1) Participants will be able to demonstrate the weaknesses of random number generators when seeded with predictable values. (2)Participants will know how system time-based seeding can be exploited.
 
-Skills Test:(1) Participants will understand how python's `[random.seed()]` and `[random.randint()]` work. (2) Participants will know how to predict the number by analyzing the seeding mechanism. (3) Participants will learn about writing scripts to sync with the program's execuation time.
+Skills Test:(1) Participants will understand how python's `random.seed()` and `random.randint()` work. (2) Participants will know how to predict the number by analyzing the seeding mechanism. (3) Participants will learn about writing scripts to sync with the program's execuation time.
 
 **IMPORTANT:** This description will **NOT** be shared with participants.
 
