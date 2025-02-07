@@ -1,6 +1,6 @@
 # How to Solve the Challenge?
 
-````py
+```py
 import random
 
 
@@ -24,5 +24,5 @@ if len(possible_seeds) == 1:
     for i in range(number_wrong_guesses):
         random.randint(0, 100_000_000)
     print(f'Next number with this seed is {random.randint(0, 100_000_000)}')
-    ```
-````
+
+```

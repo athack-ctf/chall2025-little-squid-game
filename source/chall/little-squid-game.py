@@ -15,7 +15,7 @@ def main():
         game_counter += 1
         print(f"LITTLE くコ:彡 GAME #{game_counter}")
 
-        number = random.randint(0, 100000000)
+        number = random.randint(0, 654321)
 
         print(f"I've chosen a number. You have {MAX_ATTEMPTS} attempts to guess it.")
 
