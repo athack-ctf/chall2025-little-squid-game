@@ -1,31 +1,36 @@
-"""
-For an initial incorrect guess of 81790898, we try all possible 1_000_000 seeds, and see if any of them havea a randint result of 3105130.
-
-If only one of them does, we know the seed. And now we just have to do an *additional* randint with this seed, and that's the answer (the next 'random' number).
-If there are multiple possible seeds, we should go through all of them, and do 2 randint calls the second time.
-If there are again multiple possible seeds, we should do so again, etc.
-Until we only have one possible seed, at which point we can print out what the next number is :party:
-"""
 import random
 
+# TODO: Update generated_numbers with the numbers you get.
+generated_numbers = [
+    39475,
+    21199
+]
 
-# update this each time
-number_wrong_guesses = 1
-# update this each time
-latest_wrong_result = 81790898
+MIN_NUMBER = 0
+MAX_NUMBER = 54321
+
 possible_seeds = []
+for seed in range(0, 1_000_000):
 
-# in try N (if there are multiple possible seeds in try N-1), replace range(1_000_000) with possible_seeds.copy()
-for seed_guess in range(1_000_000):
-    random.seed(seed_guess) 
-    for i in range(number_wrong_guesses):
-        result = random.randint(0, 654321)
-    # change this to the latest wrong result
-    if result == latest_wrong_result:
-        possible_seeds.append(seed_guess)
-print(possible_seeds)
+    is_possible_seed = True
+    random.seed(seed)
+    for number in generated_numbers:
+        if number == random.randint(MIN_NUMBER, MAX_NUMBER):
+            continue
+        else:
+            is_possible_seed = False
+            break
+    if is_possible_seed:
+        possible_seeds.append(seed)
+
 if len(possible_seeds) == 1:
-    random.seed(possible_seeds[0])
-    for i in range(number_wrong_guesses):
-        random.randint(0, 654321)
-    print(f'Next number with this seed is {random.randint(0, 654321)}')
+    random.seed(possible_seeds.pop())
+    for i in range(len(generated_numbers)):
+        random.randint(MIN_NUMBER, MAX_NUMBER)
+
+    print(f'Next number to guess is {random.randint(MIN_NUMBER, MAX_NUMBER)}')
+
+else:
+    print(f'Bad news: multiple ({len(possible_seeds)}) possible seeds were found :(')
+    print(f"Seeds: f{possible_seeds}")
+    print(f'You gotta add extra generated numbers.')

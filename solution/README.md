@@ -1,28 +1,24 @@
-# How to Solve the Challenge?
+# Solution
 
-```py
-import random
+- Make sure you're using the same python version as the one used in the game otherwise, the RNGs might behave
+  differently.
 
+  ![](./screenshots/screenshot1.png)
+  **IMPORTANT: USE THE PYTHON VERSION THAT THE RUNNING CHALLENGE GIVES YOU, NOT THE ONE ON THE SCREENSHOT.** 
 
-# update this each time
-number_wrong_guesses = 1
-# update this each time
-latest_wrong_result = 81790898
-possible_seeds = []
+- Fail 2 times (or more), and collect the generated numbers (for instance, `39475` and `21199`)
+  ![](./screenshots/screenshot2.png)
 
-# in try N (if there are multiple possible seeds in try N-1), replace range(1_000_000) with possible_seeds.copy()
-for seed_guess in range(1_000_000):
-    random.seed(seed_guess)
-    for i in range(number_wrong_guesses):
-        result = random.randint(0, 100_000_000)
-    # change this to the latest wrong result
-    if result == latest_wrong_result:
-        possible_seeds.append(seed_guess)
-print(possible_seeds)
-if len(possible_seeds) == 1:
-    random.seed(possible_seeds[0])
-    for i in range(number_wrong_guesses):
-        random.randint(0, 100_000_000)
-    print(f'Next number with this seed is {random.randint(0, 100_000_000)}')
+- In [solution.py](./solution.py) Populate `generated_numbers` with the collected numbers:
 
-```
+    ```
+    generated_numbers = [
+        39475,
+        21199
+    ]
+    ```
+- Execute `solution.py`. It should give you the next number.
+    ```
+    Next number to guess is 44255
+    ```
+- Enter the number to the game, and get the flag.
