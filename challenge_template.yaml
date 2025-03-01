@@ -1,0 +1,39 @@
+# Name should be "Challenge name" if only one flag, or
+# "Challenge name - 1", "Challenge name - 2", etc. if multiple ones.
+# Be careful of the spaces before and after the '-'
+name: "Little Squid Game"
+author: ""
+category: <Pwn>
+description: |
+    Little くコ:彡 has picked a secret number for you, and you have 1 attempt to guess it right!
+
+    There are two ways by which you might get the flag: (1) being very lucky, or (2) being very hacky.
+
+    Btw, make sure to check `little-squid-game.py`.
+
+    [Start your challenge instance](https://instancer.athackctf.com/chall2025-little-squid-game/create)
+    
+value: 0
+
+# Let's put the challenges as standard for now and we can script to change
+type: standard
+
+
+# Flags specify answers that your challenge use. You should generally provide at least one.
+flags:
+  - type: "static"
+    content: "ATHACKCTF{littl3_5quid_with_a_littl3_533d}"
+    data: "case_insensitive"
+
+
+# Available: beginner, interac
+tags:
+
+# Provide paths to files from the same directory that this file is in
+files:
+    - ./offline-artifacts/little-squid-game.py
+
+# Put hidden by default
+state: hidden
+
+version: "0.1"
