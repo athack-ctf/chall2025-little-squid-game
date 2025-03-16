@@ -1,13 +1,18 @@
-# Running Little Squid Game
+# Running This Challenge
 
+Build
 ```
-# Run container
-docker compose up --build
+docker build -t athack-ctf/chall2025-little-squid-game:latest .
 ```
 
-## Test your connection
-
+Run
 ```
-# Test connection (if running remotely, replace 127.0.0.1 with the container's ip)
-nc 127.0.0.1 2025
+docker run -d --name little-squid-game \
+  -p 52028:2025 \
+  athack-ctf/chall2025-little-squid-game:latest
+```
+
+Test connection (if running remotely, replace 127.0.0.1 with the container's ip)
+```
+nc 127.0.0.1 52028
 ```
