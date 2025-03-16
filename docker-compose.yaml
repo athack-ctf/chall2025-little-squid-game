@@ -1,6 +1,6 @@
 services:
   little-squid-game:
     image: athack-ctf/chall2025-little-squid-game:latest
-    build: .
+    build: ./source
     ports:
     - 52028:2025
